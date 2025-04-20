@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
     <title>Daftar Artikel</title>
 </head>
 <body>
+    @auth
+    <p>Halo, {{ Auth::user()->name }}</p>
+    <a href="{{ route('logout') }}">Logout</a>
+@endauth
+
     <h1>Daftar Artikel</h1>
     <table border="1" cellpadding="10">
         <tr>
@@ -21,5 +27,6 @@
         </tr>
         @endforeach
     </table>
+    
 </body>
 </html>
